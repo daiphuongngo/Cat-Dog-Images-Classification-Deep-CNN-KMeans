@@ -10,21 +10,7 @@
 
 ## Theory Review
 
-### 1.1 K-means Clustering
-- K-Means Clustering in TEFPA framework and reasons why it belong to "Unsupervised Learning" type of Machine Learning algorithm
-
-- Clustering with K-means algorithm
-  - Task: $D=\{\mathbf{x}_t\}_{t=1}^N\overset{f}{\to}$ $K$ cluster centroids $\{\mathbf{x}^c_i\}_{i=1}^K$ + nearest centroid assignments.
-  - Experience: only inputs $D=\{\mathbf{x}_t\}_{t=1}^N$; no labels hence *unsupervised learning*.
-  - Function space: distance functions, i.e., Euclidean distance $d(\mathbf{x}_t,\mathbf{x}_k^c) = \|\mathbf{x}_t - \mathbf{x}_k^c\| ~ \forall \mathbf{x}_t,\mathbf{x}_k^c\in\mathbb{R}^d$.
-  - Performance measure: minimizing sum of intra-cluster distances.
-  - Algorithm to search for best centroids (hence, best distance function): k-means iterative algorithm. 
-
-### 1.2  Elbow heuristics
-
-Elbow heuristic for choosing reasonable value of $k$ (number of clusters):
-
-- The elbow method is a heuristic used in determining the number of clusters $K$ in a data set $D=\{\mathbf{x}_t\}_{t=1}^N$. The method consists of plotting the explained variation as a function of the number of clusters, which means plotting a chart of total distances by the number of clusters $k=1,\dots,N$, and picking the elbow of the curve as the number of clusters to use as the optimized number of clusters $K$. In practice there may not be a sharp elbow for some datasets, and as a heuristic method, such an "elbow" cannot always be unambiguously identified.
+![theory](https://user-images.githubusercontent.com/70437668/141604768-9a3f7012-2e3b-4ecf-8944-f415cda2b6ae.jpg)
 
 ## Analysis
 
@@ -241,6 +227,8 @@ for index, img_name in enumerate(os.listdir(TEST_PATH)):
 plt.show()
 ```
 
+![10 images](https://user-images.githubusercontent.com/70437668/141604773-69313115-9dce-4196-9cfa-6a9271f63e28.jpg)
+
 #### Support functions for searching
 ```
 def get_image_from_index(image_number):
@@ -271,7 +259,7 @@ def search_image(img):
     plt.show()
 ```
 
-### Choose an image randomly from the Test set to Search
+#### Choose an image randomly from the Test set to Search
 
 Then, change the variable ``image_number`` to choose another picture.
 
@@ -280,6 +268,14 @@ image_number = 1
 img = get_image_from_index(image_number)
 ```
 
+<img src="https://user-images.githubusercontent.com/70437668/141604775-6b2fa931-064a-4115-a2a4-f1f29bf5e242.jpg" width=50% height=50%>
+
+#### Search other images
+
 ```
-### Search other images
+search_image(img)
 ```
+
+<img src="https://user-images.githubusercontent.com/70437668/141604777-46d05b2f-209f-419b-a9da-52ab19dd4a7f.jpg" width=50% height=50%>
+
+<img src="https://user-images.githubusercontent.com/70437668/141604778-acdae7a4-9df0-48f3-97a9-12b1c802e905.jpg" width=50% height=50%>
